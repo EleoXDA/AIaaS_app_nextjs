@@ -1,5 +1,5 @@
 import { UserButton } from "@clerk/nextjs";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 
 const Navbar = async () => {
@@ -8,6 +8,9 @@ const Navbar = async () => {
       <Button variant={"ghost"} size={"icon"} className="md:hidden">
         <Menu />
       </Button>
+      <div className="flex w-full justify-end">
+        <UserButton afterSignOutUrl="/"/>
+      </div>
     </div>
    );
 }
