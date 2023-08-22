@@ -37,7 +37,7 @@ export const LandingContent = () => {
 
   return (
     <div className="px-10 pb-20">
-      <div className="flex text-center gap-x-2">
+      <div className="content-center justify-center flex justify-center mb-12">
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
           <Button variant="outline" className="rounded-full h-12 text-center h-full">
             Get Started
