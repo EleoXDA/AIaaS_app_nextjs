@@ -33,16 +33,8 @@ export async function POST(
       size: resolution,
     });
     
-    return new NextResponse(JSON.stringify(response.data))
+    return new NextResponse(JSON.stringify(response.data.map(image => ({ url: image.url }))))
 
-
-
-
-    // if (!isPro) {
-    //   await incrementApiLimit();
-    // }
-
-    // return NextResponse.json(response.data.choices[0].message);
   } catch (error) {
     console.log('[IMAGE_ERROR]', error);
     return new NextResponse("Internal Error", { status: 500 });
