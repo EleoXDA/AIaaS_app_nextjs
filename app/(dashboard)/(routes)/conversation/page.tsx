@@ -19,9 +19,11 @@ import { Loader } from "@/components/loader";
 import { UserAvatar } from "@/components/user-avatar";
 import { Empty } from "@/components/ui/empty";
 import { formSchema } from "./constants";
+import { useProModal } from "@/hooks/use-pro-modal";
 
 const ConversationPage = () => {
   const router = useRouter();
+  const proModal = useProModal();
   const [messages, setMessages] = useState<OpenAI.Chat.ChatCompletionMessage[]>([]);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -46,7 +48,11 @@ const ConversationPage = () => {
 
       form.reset();
     } catch (error: any) {
+      if (error?.response?.status === 403) {
+        proModal.onOpen();
+      } else {
       console.log(error);
+      }
     } finally {
       router.refresh();
     }
