@@ -15,6 +15,7 @@ import { Loader } from "@/components/loader";
 import { Empty } from "@/components/ui/empty";
 import { formSchema } from "./constants";
 const MusicPage = () => {
+  const router = useRouter();
   const [music, setMusic] = useState<string>();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -37,6 +38,8 @@ const MusicPage = () => {
       form.reset();
     } catch (error: any) {
       console.log(error)
+    } finally {
+      router.refresh();
     }
   }
 

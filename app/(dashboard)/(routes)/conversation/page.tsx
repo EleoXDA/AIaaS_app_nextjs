@@ -47,6 +47,8 @@ const ConversationPage = () => {
       form.reset();
     } catch (error: any) {
       console.log(error);
+    } finally {
+      router.refresh();
     }
   }
 
