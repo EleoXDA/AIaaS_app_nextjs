@@ -1,0 +1,6 @@
+{
+  "build": [
+    "next build",
+    "prisma generate"
+  ]
+}
