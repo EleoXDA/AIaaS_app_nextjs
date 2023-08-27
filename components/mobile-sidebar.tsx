@@ -7,10 +7,12 @@ import { Button } from "./ui/button";
 
 interface MobileSidebarProps {
   apiLimitCount: number;
+  isPro: boolean;
 }
 
 const MobileSidebar = ({
-  apiLimitCount
+  apiLimitCount,
+  isPro = false,
 }: MobileSidebarProps) => {
   return (
     <Sheet>
@@ -20,7 +22,7 @@ const MobileSidebar = ({
         </SheetTrigger>
       </Button>
       <SheetContent side="left" className="p-0">
-        <Sidebar apiLimitCount={apiLimitCount}/>
+        <Sidebar isPro={isPro} apiLimitCount={apiLimitCount}/>
       </SheetContent>
     </Sheet>
   )
