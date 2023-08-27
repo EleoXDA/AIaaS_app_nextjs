@@ -19,6 +19,7 @@ import { useProModal } from "@/hooks/use-pro-modal";
 import { tools } from "@/constants";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import toast from "react-hot-toast";
 
 export const ProModal = () => {
   const proModal = useProModal();
@@ -31,8 +32,7 @@ export const ProModal = () => {
 
       window.location.href = response.data.url;
     } catch (error) {
-      // toast.error("Something went wrong");
-      console.log(error);
+      toast.error("Something went wrong")
     } finally {
       setLoading(false);
     }
