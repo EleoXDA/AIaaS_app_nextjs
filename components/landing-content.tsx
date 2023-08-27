@@ -28,7 +28,7 @@ const testimonials = [
     name: "Mary",
     avatar: "M",
     title: "CFO",
-    description: "The best in class, definitely worth the premium subscription!",
+    description: "The best in class, definitely worth the pro subscription!",
   },
 ];
 
