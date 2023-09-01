@@ -29,6 +29,6 @@
 
 ## Using the application
 1. **Log in using Google or Phone number** _(no real phone number or email is stored - every user is being assigned to a hash value to be visible within Prisma Studio (Database Viewer))_
-2.  **Choose one of the 5 AI modes**
+2. **Choose one of the 5 AI modes**
 3. **Start using AI**
 4. **If you like to move beyond 25 commands, you can purchase to use it without limits**
