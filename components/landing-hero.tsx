@@ -12,7 +12,7 @@ export const LandingHero = () => {
   return (
     <div className="text-white font-bold py-4 text-center space-y-5">
       <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5 font-extrabold">
-        <h1>The Best AI Tool for</h1>
+        <h1>An AI Tool for</h1>
         <div className="text-transparent bg-clip-text p-5 bg-white">
           <TypewriterComponent
             options={{
@@ -29,7 +29,7 @@ export const LandingHero = () => {
         </div>
       </div>
       <div className="text-sm md:text-xl font-light text-zinc-400">
-        Create content using AI 10x faster.
+        Chat, code, image, music and video generation in one dashboard.
       </div>
       <div>
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
